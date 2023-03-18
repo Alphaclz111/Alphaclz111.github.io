@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>我的第一个网页</title>
