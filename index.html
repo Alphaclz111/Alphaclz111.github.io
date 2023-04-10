@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <title>My Page</title>
+	<title>包含key1和key2参数的网页</title>
 </head>
-
 <body>
-  <h1>Welcome to My Page</h1>
 
-  <p>My page contains two parameters in the URL:</p >
+	<h1>欢迎来到包含key1和key2参数的网页</h1>
 
-  <ul>
-    <li>key1: Your value here</li>
-    <li>key2: Your value here</li>
-  </ul>
+	<p>
+		key1的值为：
+		<span id="key1-value"></span> <!-- 显示key1的值 -->
+	</p>
 
-  <script>
-    // 获取参数值
-    let urlParams = new URLSearchParams(window.location.search);
-    let key1 = urlParams.get('key1');
-    let key2 = urlParams.get('key2');
+	<p>
+		key2的值为：
+		<span id="key2-value"></span> <!-- 显示key2的值 -->
+	</p>
 
-    // 在页面中显示参数值
-    let key1Element = document.querySelector('li:nth-child(1)');
-    key1Element.textContent = `key1: ${key1}`;
+	<script>
+		// 从url获取key1和key2的值
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const key1Value = urlParams.get('key1');
+		const key2Value = urlParams.get('key2');
 
-    let key2Element = document.querySelector('li:nth-child(2)');
-    key2Element.textContent = `key2: ${key2}`;
-  </script>
+		// 在网页上显示key1和key2的值
+		document.getElementById('key1-value').textContent = key1Value;
+		document.getElementById('key2-value').textContent = key2Value;
+	</script>
+
 </body>
-
 </html>
