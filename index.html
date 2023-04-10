@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>带有key1和key2参数的网页</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Extract Query String Parameters</title>
+  </head>
+  <body>
+    <h1>Extract Query String Parameters</h1>
+    <p>Name: <span id="name"></span></p>
+    <p>Email: <span id="email"></span></p>
 
-	<h1>欢迎来到带有key1和key2参数的网页</h1>
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
 
-	<p>
-		key1的值为：
-		<span id="key1-value"></span> <!-- 显示key1的值 -->
-	</p>
+      const name = urlParams.get('name');
+      const email = urlParams.get('email');
 
-	<p>
-		key2的值为：
-		<span id="key2-value"></span> <!-- 显示key2的值 -->
-	</p>
-
-	<script>
-		// 获取key1和key2的值
-		const key1Value = '111'; // 假设key1的值为111
-		const key2Value = '222'; // 假设key2的值为222
-
-		// 创建具有key1和key2参数的url
-		const url = `https://alphaclz111.github.io/?key1=${key1Value}&key2=${key2Value}`;
-
-		// 在网页上显示key1和key2的值
-		document.getElementById('key1-value').textContent = key1Value;
-		document.getElementById('key2-value').textContent = key2Value;
-
-		// 打印整个url
-		console.log(url);
-	</script>
-
-</body>
+      document.getElementById('name').textContent = name;
+      document.getElementById('email').textContent = email;
+    </script>
+  </body>
 </html>
