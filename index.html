@@ -1,39 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>包含key1和key2参数的网页</title>
-</head>
-<body>
-
-	<h1>欢迎来到包含key1和key2参数的网页</h1>
-
-	<p>
-		key1的值为：
-		<span id="key1-value"></span> <!-- 显示key1的值 -->
-	</p>
-
-	<p>
-		key2的值为：
-		<span id="key2-value"></span> <!-- 显示key2的值 -->
-	</p>
-
-	<script>
-		// 从url获取key1和key2的值
-		const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const key1Value = urlParams.get('key1');
-		const key2Value = urlParams.get('key2');
-
-		// 在网页上显示key1和key2的值
-		document.getElementById('key1-value').textContent = key1Value;
-		document.getElementById('key2-value').textContent = key2Value;
-	</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
 	<title>带有key1和key2参数的网页</title>
 </head>
 <body>
