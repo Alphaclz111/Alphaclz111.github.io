@@ -11,6 +11,11 @@
 
     <script>
       const queryString = window.location.search;
+      const url ="https://alphaclz111.github.io/?key1=" +
+    nameValue +
+    "&key2=" +
+    emailValue;
+  window.open(url, "_self");
       const urlParams = new URLSearchParams(queryString);
 
       const name = urlParams.get('name');
